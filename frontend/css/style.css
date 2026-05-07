@@ -45,6 +45,25 @@ radial-gradient(circle at top left, #1e1b4b, #0b0f19 40%);
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
+}form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  max-width: 500px;
+}
+
+input,
+textarea {
+  background: #111827;
+  border: 1px solid #1f2937;
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+}
+
+textarea {
+  min-height: 140px;
 }
 
 .links a {

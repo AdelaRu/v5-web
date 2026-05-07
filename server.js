@@ -20,4 +20,10 @@ app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });app.get("/about", (req, res) => {
   res.sendFile(path.join(frontendPath, "about.html"));
+});app.get("/about", (req, res) => {
+  res.sendFile(path.join(frontendPath, "about.html"));
+});app.get("/services", (req, res) => {
+  res.sendFile(path.join(frontendPath, "services.html"));
+});app.get("/contact", (req, res) => {
+  res.sendFile(path.join(frontendPath, "contact.html"));
 });
