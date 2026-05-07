@@ -38,7 +38,8 @@ button {
   background: #0b0f19;
   color: white;
   font-family: Arial;
-}
+}background:
+radial-gradient(circle at top left, #1e1b4b, #0b0f19 40%);
 
 .navbar {
   display: flex;
@@ -78,4 +79,49 @@ button {
   background: #6d5ef5;
   color: white;
   font-size: 18px;
+}.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+}
+
+.hero h1 {
+  font-size: 80px;
+  max-width: 800px;
+  line-height: 1;
+}
+
+.hero p {
+  font-size: 24px;
+  max-width: 600px;
+  color: #9ca3af;
+}button {
+  margin-top: 30px;
+  width: 220px;
+  height: 60px;
+  border: none;
+  border-radius: 14px;
+  background: #6d5ef5;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}.card {
+  background: #111827;
+  padding: 40px;
+  border-radius: 20px;
+  flex: 1;
+  transition: 0.3s;
+  border: 1px solid #1f2937;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #6d5ef5;
 }
