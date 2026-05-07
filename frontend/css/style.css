@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Arial;
   background: #f5f7fb;
@@ -143,4 +146,55 @@ button:hover {
 .card:hover {
   transform: translateY(-10px);
   border-color: #6d5ef5;
+}.portfolio {
+  padding: 80px 40px;
+}
+
+.portfolio h2 {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.portfolio-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.project {
+  flex: 1;
+  background: #111827;
+  padding: 40px;
+  border-radius: 20px;
+  transition: 0.3s;
+  border: 1px solid #1f2937;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  border-color: #6d5ef5;
+}.footer {
+  padding: 80px 40px;
+  text-align: center;
+  border-top: 1px solid #1f2937;
+  margin-top: 80px;
+}
+
+.footer p {
+  color: #9ca3af;
+}@media (max-width: 900px) {
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .services,
+  .portfolio-grid {
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
 }
