@@ -1,13 +1,41 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <title>V5</title>
+</head>
+<body>
+  <h1>V5 běží 🚀</h1>
+</body>
+</html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>V5 Web</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: Arial; padding:40px;">
 
-  <h1>🚀 V5 běží</h1>
-  <p>Server je funkční ✔</p>
+<body>
 
+  <header class="hero">
+    <h1>V5 běží 🚀</h1>
+    <p>Moderní web + backend</p>
+  </header>
+
+  <section class="form-section">
+    <h2>Poptávka</h2>
+
+    <form id="poptavka-form">
+      <input id="jmeno" placeholder="Jméno" required />
+      <input id="email" placeholder="Email" required />
+      <input id="telefon" placeholder="Telefon" />
+      <textarea id="zprava" placeholder="Zpráva" required></textarea>
+
+      <button type="submit">Odeslat</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
