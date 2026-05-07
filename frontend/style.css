@@ -33,4 +33,49 @@ button {
   padding: 10px;
   width: 100%;
   cursor: pointer;
+}body {
+  margin: 0;
+  background: #0b0f19;
+  color: white;
+  font-family: Arial;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+
+.hero h1 {
+  font-size: 70px;
+  max-width: 700px;
+}
+
+.hero p {
+  font-size: 22px;
+  max-width: 500px;
+}
+
+button {
+  width: 200px;
+  height: 55px;
+  border: none;
+  border-radius: 12px;
+  background: #6d5ef5;
+  color: white;
+  font-size: 18px;
 }
