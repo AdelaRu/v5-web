@@ -15,9 +15,7 @@ document.getElementById("poptavka-form").addEventListener("submit", async (e) =>
         "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
-    });
-
-    await res.json();
+    });   await res.json();
     alert("Odesláno ✔");
 
   } catch (err) {
