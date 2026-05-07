@@ -3,20 +3,15 @@ const path = require("path");
 
 const app = express();
 
-app.use(express.json());
+/* 🌍 cesta k frontend */
+const frontendPath = path.join(__dirname, "../frontend");
 
-/* 🌍 frontend */
-app.use(express.static(path.join(__dirname, "../frontend")));
+/* 📂 statické soubory */
+app.use(express.static(frontendPath));
 
-/* 🧪 test API */
-app.get("/api/test", (req, res) => {
-  res.json({ ok: true });
-});
-
-/* 📩 formulář */
-app.post("/api/poptavka", (req, res) => {
-  console.log("DATA:", req.body);
-  res.json({ ok: true });
+/* 🏠 hlavní stránka */
+app.get("/", (req, res) => {
+  res.sendFile(path.join(frontendPath, "index.html"));
 });
 
 /* 🚀 start */
