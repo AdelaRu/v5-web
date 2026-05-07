@@ -57,3 +57,12 @@ app.get("/api/leads", (req, res) => {
 app.listen(3000, () => {
   console.log("🚀 V5 běží na http://localhost:3000");
 });
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("V5 běží 🚀");
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log("V5 běží na " + PORT));
