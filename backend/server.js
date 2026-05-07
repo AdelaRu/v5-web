@@ -5,41 +5,23 @@ const app = express();
 
 app.use(express.json());
 
-/* 🔥 FRONTEND */
+/* 🌍 frontend */
 app.use(express.static(path.join(__dirname, "../frontend")));
 
-/* 🔥 API - ukládání poptávky */
-app.post("/api/poptavka", (req, res) => {
-  console.log("Poptávka:", req.body);
+/* 🧪 test API */
+app.get("/api/test", (req, res) => {
   res.json({ ok: true });
 });
 
-/* 🔥 API - seznam poptávek (zatím prázdné) */
-app.get("/api/poptavky", (req, res) => {
-  res.json([]);
-});
-
-/* 🚀 start serveru */
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, "0.0.0.0", () => {
-  console.log("V5 běží na portu " + PORT);
-});const express = require("express");
-const app = express();
-
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("V5 běží 🚀");
-});
-
+/* 📩 formulář */
 app.post("/api/poptavka", (req, res) => {
-  console.log(req.body);
+  console.log("DATA:", req.body);
   res.json({ ok: true });
 });
 
+/* 🚀 start */
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, "0.0.0.0", () => {
-  console.log("V5 běží");
+  console.log("V5 běží 🚀");
 });
