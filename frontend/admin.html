@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>V5 Admin</title>
+  <style>
+    body { font-family: Arial; padding: 40px; background:#f5f7fb; }
+    h1 { color:#183a6d; }
+
+    table {
+      width:100%;
+      border-collapse: collapse;
+      margin-top:20px;
+      background:white;
+      border-radius:10px;
+      overflow:hidden;
+    }
+
+    th, td {
+      padding:12px;
+      border-bottom:1px solid #eee;
+      text-align:left;
+    }
+
+    th {
+      background:#183a6d;
+      color:white;
+    }
+
+    tr:hover {
+      background:#f0f4ff;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📊 V5 Admin Panel</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Jméno</th>
+      <th>Email</th>
+      <th>Telefon</th>
+      <th>Zpráva</th>
+      <th>Čas</th>
+    </tr>
+  </thead>
+  <tbody id="data"></tbody>
+</table>
+
+<script>
+async function load() {
+  const res = await fetch("/api/leads");
+  const data = await res.json();
+
+  const tbody = document.getElementById("data");
+
+  tbody.innerHTML = data.map(l => `
+    <tr>
+      <td>${l.jmeno}</td>
+      <td>${l.email}</td>
+      <td>${l.telefon || ""}</td>
+      <td>${l.zprava}</td>
+      <td>${new Date(l.time).toLocaleString()}</td>
+    </tr>
+  `).join("");
+}
+
+load();
+setInterval(load, 3000);
+</script>
+
+</body>
+</html>
